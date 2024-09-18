@@ -30,6 +30,7 @@ let dmObj = {
   ],
 };
 
+// date object
 let dateObj = new Date();
 
 let dayName = dmObj.days[dateObj.getDay()];
@@ -37,6 +38,21 @@ let month = dateObj.getMonth();
 let year = dateObj.getFullYear();
 let date = dateObj.getDate();
 
-console.log(dayName, month, year, date);
+// console.log(dayName, month, year, date);
 
+// todays date
 datetxtElement.innerHTML = `${dayName}, ${date}, ${dmObj.months[month]}, ${year}`;
+
+const displayCalendar = () => {
+  let lastDateofMonth = new Date(year, month + 1, 0).getDate();
+  let days = '';
+  for (let i = 1; i <= lastDateofMonth; i++) {
+    days += `<li>${i}</li>`;
+  }
+  //   display all days inside the html
+  datesElement.innerHTML = days;
+
+  //   display current month and year
+  monthYearElement.innerHTML = `${dmObj.months[month]}, ${year}`;
+};
+displayCalendar();
