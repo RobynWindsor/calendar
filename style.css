@@ -1,0 +1,43 @@
+:root {
+  --calendar-bg-color: #262829;
+  --calendar-font-color: #fff;
+  --weekdays-border-bottom-color: #404040;
+  --calendar-date-hover-color: #b3b3b3;
+  --calendar-dummy-color: #505050;
+  --calendar-current-date-date-color: #1b1f21;
+  --calnedar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'poppins', sans-serif;
+  overflow: hidden;
+}
+
+.calendar {
+  background-color: var(--calendar-bg-color);
+  color: var(--calendar-font-color);
+  border-radius: 5px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 5px 5px 10px var(--calendar-bg-color);
+}
+
+.calendar_inner {
+  padding: 2rem;
+}
+.calendar_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
