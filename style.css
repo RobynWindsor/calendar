@@ -5,7 +5,7 @@
   --calendar-date-hover-color: #b3b3b3;
   --calendar-dummy-color: #505050;
   --calendar-current-date-date-color: #1b1f21;
-  --calnedar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
+  --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
 }
 
 * {
@@ -40,4 +40,69 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+}
+
+.fa-solid.fa-arrow-left,
+.fa-solid.fa-arrow-right {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.current_datetime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--calendar-current-date-date-color);
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.current_datetime .daytxt {
+  background-color: green;
+  color: var(--calendar-font-color);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.days_date ul {
+  list-style: none;
+}
+
+.days_date .days,
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.dates {
+  margin: 1rems;
+}
+.days_date .days li {
+  border-bottom: 2px solid var(--weekdays-border-bottom-color);
+  margin: 0 0.2rem;
+}
+
+.dates li {
+  padding: 0.5rem;
+  margin: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--calendar-font-color);
+}
+
+.days_date .dates li:hover {
+  background-color: var(--calendar-date-hover-color);
+  color: var(--calendar-bg-color);
+}
+
+.days_date .dates li.active {
+  background: var(--calendar-today-color);
+}
+
+.days_date .dummy {
+  color: var(--calendar-dummy-color);
 }
