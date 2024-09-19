@@ -4,7 +4,7 @@
   --weekdays-border-bottom-color: #404040;
   --calendar-date-hover-color: #b3b3b3;
   --calendar-dummy-color: #505050;
-  --calendar-current-date-date-color: #1b1f21;
+  --calendar-current-date-color: #1b1f21;
   --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
 }
 
@@ -35,12 +35,18 @@ body {
 .calendar_inner {
   padding: 2rem;
 }
-.calendar_heading {
+.calendar_headings {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
+
+/* .calendar_heading h2 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+} */
 
 .fa-solid.fa-arrow-left,
 .fa-solid.fa-arrow-right {
@@ -52,7 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--calendar-current-date-date-color);
+  background-color: var(--calendar-current-date-color);
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 5px;
